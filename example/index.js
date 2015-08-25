@@ -16,7 +16,9 @@ var state = {
             age: 42,
             fruits: [{ color: 'blue' }]
         }
-    ]
+    ],
+
+    title: 'List'
 };
 
 template.useState(state);
@@ -26,25 +28,28 @@ var Alert = require('./Alert');
 var App = React.createClass({
     render: function() {
         return (
-            <ul>
-                <TMPL_LOOP people>
-                    <li>
-                        <span><TMPL_VAR name/></span>
+            <div>
+                <h1><TMPL_VAR title /></h1>
+                <ul>
+                    <TMPL_LOOP people>
+                        <li>
+                            <span><TMPL_VAR name /></span>
 
-                        <TMPL_IF showAge>
-                            <span> <TMPL_VAR age/></span>
-                        </TMPL_IF>
+                            <TMPL_IF showAge>
+                                <span> <TMPL_VAR age /></span>
+                            </TMPL_IF>
 
-                        <TMPL_IF fruits>
-                            <ul>
-                                <TMPL_LOOP fruits>
-                                    <li><TMPL_VAR color /></li>
-                                </TMPL_LOOP>
-                            </ul>
-                        </TMPL_IF>
-                    </li>
-                </TMPL_LOOP>
-            </ul>
+                            <TMPL_IF fruits>
+                                <ul>
+                                    <TMPL_LOOP fruits>
+                                        <li><TMPL_VAR color /></li>
+                                    </TMPL_LOOP>
+                                </ul>
+                            </TMPL_IF>
+                        </li>
+                    </TMPL_LOOP>
+                </ul>
+            </div>
         );
     }
 });
