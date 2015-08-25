@@ -2,7 +2,13 @@ var React = require('react');
 
 var template = require('../lib/template');
 
-var { TMPL_CONTAINER, TMPL_VAR, TMPL_IF, TMPL_ELSE, TMPL_LOOP } = template;
+var {
+    TMPL_CONTAINER,
+    TMPL_VAR,
+    TMPL_IF,
+    TMPL_ELSE,
+    TMPL_LOOP
+} = template;
 
 var templateData = {
     prefix: 'Person: ',
@@ -42,7 +48,7 @@ var App = React.createClass({
 
                                 <TMPL_IF showAge>
                                     <span>, age: <TMPL_VAR age /></span>
-                                <TMPL_ELSE/>
+                                <TMPL_ELSE />
                                     <span>, no age</span>
                                 </TMPL_IF>
 
