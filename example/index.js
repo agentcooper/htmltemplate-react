@@ -6,8 +6,16 @@ var { TMPL_VAR, TMPL_IF, TMPL_LOOP } = template;
 
 var state = {
     people: [
-        { name: 'John' },
-        { name: 'Mary', showAge: true, age: 42 }
+        {
+            name: 'John',
+            fruits: [{ color: 'yellow' }, { color: 'red' }]
+        },
+        {
+            name: 'Mary',
+            showAge: true,
+            age: 42,
+            fruits: [{ color: 'blue' }]
+        }
     ]
 };
 
@@ -27,8 +35,12 @@ var App = React.createClass({
                             <span> <TMPL_VAR age/></span>
                         </TMPL_IF>
 
-                        <TMPL_IF something>
-                            <Alert />
+                        <TMPL_IF fruits>
+                            <ul>
+                                <TMPL_LOOP fruits>
+                                    <li><TMPL_VAR color /></li>
+                                </TMPL_LOOP>
+                            </ul>
                         </TMPL_IF>
                     </li>
                 </TMPL_LOOP>
