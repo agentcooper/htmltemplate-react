@@ -1,6 +1,6 @@
 var React = require('react');
 
-var template = require('./template');
+var template = require('../lib/template');
 
 var { TMPL_VAR, TMPL_IF, TMPL_LOOP } = template;
 

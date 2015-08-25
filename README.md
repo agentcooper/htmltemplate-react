@@ -4,6 +4,8 @@ Experiment to provide [HTML::Template](http://search.cpan.org/~samtregar/HTML-Te
 
 ```bash
 npm install
-npm run build
-npm start
+
+cd example
+webpack
+open index.html
 ```
