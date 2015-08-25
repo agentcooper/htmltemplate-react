@@ -1,5 +1,7 @@
 ### htmltemplate-react
 
+`npm install htmltemplate-react`
+
 Experiment to provide a subset of [HTML::Template](http://search.cpan.org/~samtregar/HTML-Template-2.6/Template.pm)-like tag system powered by React components.
 
 This is proof of concept. You probably don't want to use on a new project.
