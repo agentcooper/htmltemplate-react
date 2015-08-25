@@ -1,14 +1,12 @@
 var React = require('react');
 
-var template = require('../lib/template');
-
 var {
     TMPL_CONTAINER,
     TMPL_VAR,
     TMPL_IF,
     TMPL_ELSE,
     TMPL_LOOP
-} = template;
+} = require('../');
 
 var templateData = {
     prefix: 'Person: ',
