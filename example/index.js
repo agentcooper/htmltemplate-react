@@ -18,6 +18,7 @@ var state = {
         }
     ],
 
+    showSubtitle: true,
     title: 'List'
 };
 
@@ -30,6 +31,9 @@ var App = React.createClass({
         return (
             <div>
                 <h1><TMPL_VAR title /></h1>
+                <TMPL_IF showSubtitle>
+                    <h2>Subtitle</h2>
+                </TMPL_IF>
                 <ul>
                     <TMPL_LOOP people>
                         <li>
