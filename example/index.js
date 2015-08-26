@@ -45,7 +45,9 @@ var App = React.createClass({
                     <ul>
                         <TMPL_LOOP people>
                             <li>
-                                <span><TMPL_VAR prefix /></span>
+                                <span>
+                                    <TMPL_IF __first__>first </TMPL_IF><TMPL_VAR prefix />
+                                </span>
                                 <span><TMPL_VAR name /></span>
 
                                 <TMPL_IF showAge>
