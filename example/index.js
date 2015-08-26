@@ -4,6 +4,7 @@ var {
     TMPL_CONTAINER,
     TMPL_VAR,
     TMPL_IF,
+    TMPL_UNLESS,
     TMPL_ELSE,
     TMPL_LOOP
 } = require('../');
@@ -20,6 +21,9 @@ var templateData = {
             showAge: true,
             age: 42,
             fruits: [{ color: 'blue' }]
+        },
+        {
+            name: 'Gary'
         }
     ],
 
@@ -57,6 +61,10 @@ var App = React.createClass({
                                         </TMPL_LOOP>
                                     </ul>
                                 </TMPL_IF>
+
+                                <TMPL_UNLESS fruits>
+                                    <div>no fruits</div>
+                                </TMPL_UNLESS>
                             </li>
                         </TMPL_LOOP>
                     </ul>
